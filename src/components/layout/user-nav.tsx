@@ -19,11 +19,11 @@ import { useEffect, useState } from 'react';
 export function UserNav() {
   const { t } = useTranslation();
   const [name, setName] = useState('Vivek Ranjan');
-  const [email, setEmail] = useState('vivek@bhumicare.com');
+  const [email, setEmail] = useState('vivek@dharaai.com');
 
   useEffect(() => {
-    const storedName = localStorage.getItem('bhumicare_user_name');
-    const storedEmail = localStorage.getItem('bhumicare_user_email');
+    const storedName = localStorage.getItem('dharaai_user_name');
+    const storedEmail = localStorage.getItem('dharaai_user_email');
     if(storedName) {
       setName(storedName);
     }

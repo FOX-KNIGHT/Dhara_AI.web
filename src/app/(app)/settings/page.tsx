@@ -21,10 +21,10 @@ export default function SettingsPage() {
     const [farmCoordinates, setFarmCoordinates] = useState('');
 
     useEffect(() => {
-        const storedName = localStorage.getItem('bhumicare_user_name');
-        const storedEmail = localStorage.getItem('bhumicare_user_email');
-        const storedPlotId = localStorage.getItem('bhumicare_plot_id');
-        const storedCoords = localStorage.getItem('bhumicare_field_coordinates');
+        const storedName = localStorage.getItem('dharaai_user_name');
+        const storedEmail = localStorage.getItem('dharaai_user_email');
+        const storedPlotId = localStorage.getItem('dharaai_plot_id');
+        const storedCoords = localStorage.getItem('dharaai_field_coordinates');
         
         if (storedName) setName(storedName);
         if (storedEmail) setEmail(storedEmail);

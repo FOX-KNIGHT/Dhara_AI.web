@@ -9,7 +9,7 @@ export default function LoginPage() {
   return (
     <Card className="w-full max-w-sm bg-background/30 backdrop-blur-xl border-white/20">
       <CardHeader>
-        <CardTitle className="text-2xl font-headline">{t('login_to_bhumicare')}</CardTitle>
+        <CardTitle className="text-2xl font-headline">{t('login_to_dharaai')}</CardTitle>
         <CardDescription>
           Enter your email below to login to your account
         </CardDescription>

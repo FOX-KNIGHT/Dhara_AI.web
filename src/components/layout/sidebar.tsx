@@ -19,7 +19,7 @@ import {
   SidebarMenuItem,
   SidebarMenuButton,
 } from '@/components/ui/sidebar';
-import { BhumicareLogo } from '@/components/icons';
+import { DharaAILogo } from '@/components/icons';
 import { useTranslation } from '@/hooks/use-translation';
 
 export default function AppSidebar() {
@@ -39,9 +39,9 @@ export default function AppSidebar() {
     <>
       <SidebarHeader>
         <Link href="/" className="flex items-center gap-2 p-2">
-          <BhumicareLogo className="w-8 h-8 text-primary" />
+          <DharaAILogo className="w-8 h-8 text-primary" />
           <span className="font-headline text-lg font-semibold group-data-[collapsible=icon]:hidden">
-            {t('bhumicare')}
+            {t('dharaai')}
           </span>
         </Link>
       </SidebarHeader>

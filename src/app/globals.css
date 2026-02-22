@@ -1,12 +1,15 @@
+/* TEST CHANGE */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 98%; /* Light mode background */
-    --foreground: 224 71.4% 4.1%; /* Light mode text */
-    
+    --background: 0 0% 98%;
+    /* Light mode background */
+    --foreground: 224 71.4% 4.1%;
+    /* Light mode text */
+
     --background-secondary: 0 0% 94%;
 
     --card: 0 0% 100%;
@@ -15,119 +18,150 @@
     --popover: 0 0% 100%;
     --popover-foreground: 224 71.4% 4.1%;
 
-    --primary: 142 70.6% 45.3%; /* Electric Green */
+    --primary: 160 84% 39%;
+    /* Deep Emerald / Teal */
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 38 92.1% 50.2%; /* #f59e0b */
+    --secondary: 42 100% 53%;
+    /* Gold / Amber for accents */
     --secondary-foreground: 224 71.4% 4.1%;
 
     --muted: 0 0% 94%;
     --muted-foreground: 240 4% 46%;
 
-    --accent: 0 0% 90%;
-    --accent-foreground: 224 71.4% 4.1%;
+    --accent: 160 84% 90%;
+    --accent-foreground: 160 84% 20%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
     --border: 0 0% 89.8%;
     --input: 0 0% 89.8%;
-    --ring: 142 71% 45%;
+    --ring: 160 84% 39%;
 
     --radius: 0.8rem;
   }
 
   .dark {
-    --background: 224 71.4% 4.1%; /* #0A0A0A */
-    --foreground: 0 0% 98%; /* #FAFAFA */
+    --background: 220 50% 4%;
+    /* Very dark deep slate blue #050810 */
+    --foreground: 0 0% 98%;
+    /* #FAFAFA */
 
-    --background-secondary: 224 40% 9%;
+    --background-secondary: 220 40% 8%;
+    /* Slightly lighter for sections */
 
-    --card: 224 40% 9%;
+    --card: 220 40% 8%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 224 71.4% 4.1%;
+    --popover: 220 50% 4%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 142 70.6% 45.3%; /* Electric Green */
+    --primary: 160 84% 39%;
+    /* Bright Neon Emerald */
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 38 92.1% 50.2%; /* #f59e0b */
+    --secondary: 42 100% 53%;
+    /* Golden yellow */
     --secondary-foreground: 224 71.4% 4.1%;
 
-    --muted: 224 40% 15%;
-    --muted-foreground: 0 0% 62.9%;
+    --muted: 220 30% 15%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 224 40% 15%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 160 84% 15%;
+    /* Dark Emerald for hover states */
+    --accent-foreground: 160 84% 98%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 240 4% 25%;
-    --input: 240 4% 15%;
-    --ring: 142 71% 45%;
+    --border: 220 30% 18%;
+    --input: 220 30% 18%;
+    --ring: 160 84% 39%;
   }
 }
+
 
 @layer base {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+
   .filter-white {
     filter: brightness(0) invert(1);
   }
 }
 
 @layer utilities {
-    @keyframes aurora {
-      from {
-        background-position: 50% 50%, 50% 50%;
-      }
-      to {
-        background-position: 350% 50%, 350% 50%;
-      }
+  @keyframes aurora {
+    from {
+      background-position: 50% 50%, 50% 50%;
     }
-   .bg-aurora-hero {
-      position: relative;
-      overflow: hidden;
+
+    to {
+      background-position: 350% 50%, 350% 50%;
     }
-    .bg-aurora-hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background-image: radial-gradient(
-        ellipse 80% 50% at 50% 120%,
-        hsla(var(--primary), 0.15),
-        transparent
-      );
-      animation: aurora 20s linear infinite;
-    }
-    .bg-aurora-static {
-        background-image: radial-gradient(
-          ellipse at top left,
-          hsla(var(--primary), 0.1),
-          transparent 50%
-        ),
-        radial-gradient(
-          ellipse at bottom right,
-          hsla(280, 100%, 50%, 0.1),
-          transparent 50%
-        );
-    }
-     .bg-aurora-cta {
-      background-image: radial-gradient(
-        ellipse 100% 100% at 50% 50%,
-        hsla(142, 70%, 45%, 0.15),
-        transparent
-      ), radial-gradient(
-        ellipse 100% 100% at 50% 50%,
+  }
+
+  .bg-aurora-hero {
+    position: relative;
+    overflow: hidden;
+    background: radial-gradient(circle at 100% 0%, hsl(var(--primary) / 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 0% 100%, hsl(var(--primary) / 0.1) 0%, transparent 50%);
+  }
+
+  .bg-aurora-static {
+    background-image: radial-gradient(ellipse at top left,
+        hsla(var(--primary), 0.1),
+        transparent 50%),
+      radial-gradient(ellipse at bottom right,
+        hsla(var(--secondary), 100%, 50%, 0.1),
+        transparent 50%);
+  }
+
+  .bg-aurora-cta {
+    background-image: radial-gradient(ellipse 100% 100% at 50% 50%,
+        hsla(160, 84%, 39%, 0.15),
+        transparent), radial-gradient(ellipse 100% 100% at 50% 50%,
         hsla(280, 100%, 50%, 0.1),
-        transparent
-      );
-       animation: aurora 20s linear infinite;
+        transparent);
+    animation: aurora 20s linear infinite;
+  }
+
+  .glass-card {
+    @apply bg-background/40 backdrop-blur-md border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)];
+  }
+
+  .glass-glow {
+    @apply relative overflow-hidden;
+  }
+
+  .glass-glow::after {
+    content: '';
+    @apply absolute -inset-[100%] opacity-20 pointer-events-none;
+    background: conic-gradient(from 0deg, transparent, hsl(var(--primary)), transparent 30%);
+    animation: rotate 10s linear infinite;
+  }
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
     }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .text-glow {
+    text-shadow: 0 0 15px hsl(var(--primary) / 0.5);
+  }
+
+  .neon-border {
+    @apply border-primary/50 shadow-[0_0_15px_rgba(16, 185, 129, 0.2)];
+  }
 }

@@ -1,4 +1,4 @@
-# **App Name**: Bhumicare
+# **App Name**: DharaAI
 
 ## Core Features:
 

@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { BhumicareLogo } from '@/components/icons';
+import { DharaAILogo } from '@/components/icons';
 import { cn } from '@/lib/utils';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
@@ -77,8 +77,8 @@ export function LandingHeader() {
             >
                 <div className="container mx-auto flex items-center justify-between h-20 px-6 max-w-7xl">
                     <Link href="/" className="flex items-center gap-2" onClick={() => setIsMenuOpen(false)}>
-                        <BhumicareLogo className="w-8 h-8 text-primary" />
-                        <span className="text-xl font-semibold tracking-tighter">Bhumicare</span>
+                        <DharaAILogo className="w-8 h-8 text-primary" />
+                        <span className="text-xl font-semibold tracking-tighter">DharaAI</span>
                     </Link>
                     
                     <nav className="hidden lg:flex items-center gap-8">
@@ -127,8 +127,8 @@ export function LandingHeader() {
                         <div className="container mx-auto px-6 h-full flex flex-col">
                             <div className="flex items-center justify-between h-20">
                                 <Link href="/" className="flex items-center gap-2" onClick={() => setIsMenuOpen(false)}>
-                                    <BhumicareLogo className="w-8 h-8 text-primary" />
-                                    <span className="text-xl font-semibold">Bhumicare</span>
+                                    <DharaAILogo className="w-8 h-8 text-primary" />
+                                    <span className="text-xl font-semibold">DharaAI</span>
                                 </Link>
                                 <Button variant="ghost" size="icon" onClick={() => setIsMenuOpen(false)}>
                                     <X className="h-6 w-6" />

@@ -1,25 +1,25 @@
 'use client';
 
-import { Bar, BarChart, CartesianGrid, XAxis, YAxis, ReferenceLine } from 'recharts';
+import { Bar, BarChart, CartesianGrid, XAxis, YAxis, ReferenceLine, Cell } from 'recharts';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { ChartContainer, ChartTooltip, ChartTooltipContent } from '@/components/ui/chart';
 import { useTranslation } from '@/hooks/use-translation';
 
 const chartData = [
-  { nutrient: 'Nitrogen', value: 150, idealMin: 120, idealMax: 180 },
-  { nutrient: 'Phosphorus', value: 50, idealMin: 40, idealMax: 60 },
-  { nutrient: 'Potassium', value: 100, idealMin: 90, idealMax: 120 },
+    { nutrient: 'Nitrogen', value: 150, idealMin: 120, idealMax: 180 },
+    { nutrient: 'Phosphorus', value: 50, idealMin: 40, idealMax: 60 },
+    { nutrient: 'Potassium', value: 100, idealMin: 90, idealMax: 120 },
 ];
 
 const chartConfig = {
-  value: {
-    label: 'Current Value (mg/kg)',
-    color: 'hsl(var(--chart-2))',
-  },
-  ideal: {
-    label: 'Ideal Range',
-    color: 'hsl(var(--muted))',
-  }
+    value: {
+        label: 'Current Value (mg/kg)',
+        color: 'hsl(var(--chart-2))',
+    },
+    ideal: {
+        label: 'Ideal Range',
+        color: 'hsl(var(--muted))',
+    }
 };
 
 export function NpkChart() {
@@ -35,19 +35,19 @@ export function NpkChart() {
                     <BarChart data={chartData} layout="vertical" margin={{ left: 10, right: 10 }}>
                         <CartesianGrid horizontal={false} />
                         <XAxis type="number" dataKey="value" hide />
-                        <YAxis 
-                          dataKey="nutrient" 
-                          type="category"
-                          tickLine={false}
-                          axisLine={false}
-                          tickMargin={10}
-                          width={80}
+                        <YAxis
+                            dataKey="nutrient"
+                            type="category"
+                            tickLine={false}
+                            axisLine={false}
+                            tickMargin={10}
+                            width={80}
                         />
                         <ChartTooltip
                             cursor={false}
                             content={<ChartTooltipContent indicator="line" />}
                         />
-                         <Bar dataKey="value" radius={5} barSize={24} name="Current">
+                        <Bar dataKey="value" radius={5} barSize={24} name="Current">
                             {chartData.map((entry, index) => {
                                 let color;
                                 if (entry.value < entry.idealMin || entry.value > entry.idealMax) {
@@ -55,10 +55,10 @@ export function NpkChart() {
                                 } else {
                                     color = "hsl(var(--primary))"; // Optimal
                                 }
-                                return <Bar key={`cell-${index}`} fill={color} />;
+                                return <Cell key={`cell-${index}`} fill={color} />;
                             })}
                         </Bar>
-                         <ReferenceLine
+                        <ReferenceLine
                             x={120}
                             strokeDasharray="3 3"
                             stroke="hsl(var(--border))"

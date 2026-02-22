@@ -1,4 +1,4 @@
-import { BhumicareLogo } from '@/components/icons';
+import { DharaAILogo } from '@/components/icons';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useTranslation } from '@/hooks/use-translation';
@@ -13,8 +13,8 @@ export function LandingFooter() {
                 <div className="grid md:grid-cols-12 gap-8">
                     <div className="md:col-span-4 space-y-4">
                          <Link href="/" className="flex items-center gap-2">
-                            <BhumicareLogo className="w-8 h-8 text-primary" />
-                            <span className="font-headline text-xl font-semibold">Bhumicare</span>
+                            <DharaAILogo className="w-8 h-8 text-primary" />
+                            <span className="font-headline text-xl font-semibold">DharaAI</span>
                         </Link>
                         <p className="text-sm text-muted-foreground">{t('footer_tagline')}</p>
                         <div className="flex space-x-4">
@@ -49,7 +49,7 @@ export function LandingFooter() {
                     </div>
                 </div>
                  <div className="mt-8 border-t pt-6 text-center text-sm text-muted-foreground">
-                    <p>&copy; {new Date().getFullYear()} Bhumicare. {t('footer_rights_reserved')}</p>
+                    <p>&copy; {new Date().getFullYear()} DharaAI. {t('footer_rights_reserved')}</p>
                 </div>
             </div>
         </footer>

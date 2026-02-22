@@ -18,7 +18,7 @@ export function WeatherWidget() {
   const [location, setLocation] = useState('New Delhi');
 
   useEffect(() => {
-    const storedLocation = localStorage.getItem('bhumicare_user_location');
+    const storedLocation = localStorage.getItem('dharaai_user_location');
     if (storedLocation) {
       try {
         const parsedLocation = JSON.parse(storedLocation);

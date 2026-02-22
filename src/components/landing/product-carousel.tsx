@@ -1,7 +1,8 @@
 'use client';
 
 import React, { useState, useCallback, useEffect } from 'react';
-import useEmblaCarousel, { EmblaOptionsType } from 'embla-carousel-react';
+import useEmblaCarousel from 'embla-carousel-react';
+type EmblaOptionsType = any; // Fallback for build
 import Autoplay from 'embla-carousel-autoplay';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -86,15 +87,15 @@ export const ProductCarousel = () => {
                     </div>
                 </div>
 
-                 <div className="flex items-center justify-center gap-4 mt-8">
+                <div className="flex items-center justify-center gap-4 mt-8">
                     <PrevButton onClick={scrollPrev} enabled={prevBtnEnabled} />
                     <div className="flex items-center justify-center gap-3">
                         {scrollSnaps.map((_, index) => (
-                        <DotButton
-                            key={index}
-                            selected={index === selectedIndex}
-                            onClick={() => scrollTo(index)}
-                        />
+                            <DotButton
+                                key={index}
+                                selected={index === selectedIndex}
+                                onClick={() => scrollTo(index)}
+                            />
                         ))}
                     </div>
                     <NextButton onClick={scrollNext} enabled={nextBtnEnabled} />
@@ -105,8 +106,8 @@ export const ProductCarousel = () => {
                 <DialogContent className="max-w-4xl p-2 bg-background/80 backdrop-blur-xl border-white/20">
                     {lightboxImage && (
                         <>
-                           <DialogTitle className="sr-only">{lightboxImage.description}</DialogTitle>
-                           <Image
+                            <DialogTitle className="sr-only">{lightboxImage.description}</DialogTitle>
+                            <Image
                                 src={lightboxImage.imageUrl}
                                 alt={lightboxImage.description}
                                 width={1200}

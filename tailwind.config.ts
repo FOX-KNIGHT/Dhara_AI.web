@@ -1,4 +1,4 @@
-import type {Config} from 'tailwindcss';
+import type { Config } from 'tailwindcss';
 
 const config = {
   darkMode: ['class'],
@@ -24,8 +24,9 @@ const config = {
     extend: {
       fontFamily: {
         sans: ['var(--font-inter)', 'sans-serif'],
+        headline: ['var(--font-outfit)', 'sans-serif'],
       },
-       colors: {
+      colors: {
         background: 'hsl(var(--background))',
         'background-secondary': 'hsl(var(--background-secondary))',
         foreground: 'hsl(var(--foreground))',
@@ -68,14 +69,14 @@ const config = {
       },
       keyframes: {
         'accordion-down': {
-          from: {height: '0'},
-          to: {height: 'var(--radix-accordion-content-height)'},
+          from: { height: '0' },
+          to: { height: 'var(--radix-accordion-content-height)' },
         },
         'accordion-up': {
-          from: {height: 'var(--radix-accordion-content-height)'},
-          to: {height: '0'},
+          from: { height: 'var(--radix-accordion-content-height)' },
+          to: { height: '0' },
         },
-         aurora: {
+        aurora: {
           from: {
             backgroundPosition: '50% 50%, 50% 50%',
           },
@@ -94,17 +95,17 @@ const config = {
       },
     },
   },
-  plugins: [require('tailwindcss-animate'), 
-      function ({ addUtilities }: { addUtilities: any }) {
-      addUtilities({
-        '.backface-hidden': {
-          'backface-visibility': 'hidden',
-        },
-        '.perspective-1000': {
-          'perspective': '1000px',
-        }
-      });
-    },
+  plugins: [require('tailwindcss-animate'),
+  function ({ addUtilities }: { addUtilities: any }) {
+    addUtilities({
+      '.backface-hidden': {
+        'backface-visibility': 'hidden',
+      },
+      '.perspective-1000': {
+        'perspective': '1000px',
+      }
+    });
+  },
   ],
 } satisfies Config;
 

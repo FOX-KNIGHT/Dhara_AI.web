@@ -1,0 +1,16 @@
+﻿src/components/auth/register-form.tsx(8,29): error TS2307: Cannot find module '@vis.gl/react-google-maps' or its corresponding type declarations.
+src/components/auth/register-form.tsx(44,45): error TS2339: Property 'google' does not exist on type 'Window & typeof globalThis'.
+src/components/auth/register-form.tsx(46,43): error TS2339: Property 'google' does not exist on type 'Window & typeof globalThis'.
+src/components/auth/register-form.tsx(47,40): error TS2503: Cannot find namespace 'google'.
+src/components/dashboard/npk-chart.tsx(58,41): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: Props): Bar', gave the following error.
+    Property 'dataKey' is missing in type '{ key: string; fill: string; }' but required in type 'Pick<Readonly<Props>, "string" | "path" | "href" | "origin" | "media" | "spacing" | "order" | "height" | "width" | "rotate" | "scale" | "cursor" | "fill" | "stroke" | ... 486 more ... | "maxBarSize">'.
+  Overload 2 of 2, '(props: Props, context: any): Bar', gave the following error.
+    Property 'dataKey' is missing in type '{ key: string; fill: string; }' but required in type 'Pick<Readonly<Props>, "string" | "path" | "href" | "origin" | "media" | "spacing" | "order" | "height" | "width" | "rotate" | "scale" | "cursor" | "fill" | "stroke" | ... 486 more ... | "maxBarSize">'.
+src/components/farm-map/leaflet-fertility-map-impl.tsx(298,53): error TS2322: Type '{ children: Element; position: [number, number]; onClose: () => void; }' is not assignable to type 'IntrinsicAttributes & PopupProps & RefAttributes<Popup>'.
+  Property 'onClose' does not exist on type 'IntrinsicAttributes & PopupProps & RefAttributes<Popup>'.
+src/components/landing/feature-showcase.tsx(113,33): error TS2322: Type '(el: HTMLDivElement | null) => HTMLDivElement | null' is not assignable to type 'LegacyRef<HTMLDivElement> | undefined'.
+  Type '(el: HTMLDivElement | null) => HTMLDivElement | null' is not assignable to type '(instance: HTMLDivElement | null) => void | (() => VoidOrUndefinedOnly)'.
+    Type 'HTMLDivElement | null' is not assignable to type 'void | (() => VoidOrUndefinedOnly)'.
+      Type 'null' is not assignable to type 'void | (() => VoidOrUndefinedOnly)'.
+src/components/landing/product-carousel.tsx(4,28): error TS2614: Module '"embla-carousel-react"' has no exported member 'EmblaOptionsType'. Did you mean to use 'import EmblaOptionsType from "embla-carousel-react"' instead?

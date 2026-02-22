@@ -7,12 +7,12 @@
 
 <p align="center">
     <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License">
-    <img src="https://img.shields.io/github/repo-size/navixair/Bhumicare.web?style=flat&logo=github&label=Repo%20Size" alt="Repo Size">
-    <img src="https://img.shields.io/github/issues/navixair/Bhumicare.web?style=flat&logo=github&color=green" alt="Issues">
-    <img src="https://img.shields.io/github/forks/navixair/Bhumicare.web?style=flat&logo=github&color=blue" alt="Forks">
-    <img src="https://img.shields.io/github/stars/navixair/Bhumicare.web?style=flat&logo=github&color=yellow" alt="Stars">
-    <img src="https://img.shields.io/github/contributors/navixair/Bhumicare.web?style=flat&logo=github&color=orange" alt="Contributors">
-    <img src="https://img.shields.io/github/last-commit/navixair/Bhumicare.web?style=flat&logo=github&color=red" alt="Last Commit">
+    <img src="https://img.shields.io/github/repo-size/navixair/DharaAI.web?style=flat&logo=github&label=Repo%20Size" alt="Repo Size">
+    <img src="https://img.shields.io/github/issues/navixair/DharaAI.web?style=flat&logo=github&color=green" alt="Issues">
+    <img src="https://img.shields.io/github/forks/navixair/DharaAI.web?style=flat&logo=github&color=blue" alt="Forks">
+    <img src="https://img.shields.io/github/stars/navixair/DharaAI.web?style=flat&logo=github&color=yellow" alt="Stars">
+    <img src="https://img.shields.io/github/contributors/navixair/DharaAI.web?style=flat&logo=github&color=orange" alt="Contributors">
+    <img src="https://img.shields.io/github/last-commit/navixair/DharaAI.web?style=flat&logo=github&color=red" alt="Last Commit">
 </p>
 
 <p align="center">
@@ -45,9 +45,9 @@
 
 ## Overview
 
-Bhumicare.web is an open-source platform designed to empower developers in creating intelligent, sustainable agricultural applications. It integrates AI-driven analytics with live environmental data, offering modular components to streamline agricultural workflows.
+DharaAI.web is an open-source platform designed to empower developers in creating intelligent, sustainable agricultural applications. It integrates AI-driven analytics with live environmental data, offering modular components to streamline agricultural workflows.
 
-### Why Bhumicare.web?
+### Why DharaAI.web?
 
 This project aims to facilitate the development of sustainable farming solutions through a modular architecture and cutting-edge technologies. Our core features include:
 
@@ -70,18 +70,18 @@ This project requires the following dependencies:
 
 ### Installation
 
-Clone **Bhumicare.web** from the source and install dependencies:
+Clone **DharaAI.web** from the source and install dependencies:
 
 1.  **Clone the repository:**
 
     ```bash
-    git clone [https://github.com/navixair/Bhumicare.web](https://github.com/navixair/Bhumicare.web)
+    git clone [https://github.com/navixair/DharaAI.web](https://github.com/navixair/DharaAI.web)
     ```
 
 2.  **Navigate to the project directory:**
 
     ```bash
-    cd Bhumicare.web
+    cd DharaAI.web
     ```
 
 3.  **Install the dependencies:**

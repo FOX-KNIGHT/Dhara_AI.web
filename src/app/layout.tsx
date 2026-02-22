@@ -3,7 +3,7 @@ import { ThemeProvider } from '@/components/theme-provider';
 import { LanguageProvider } from '@/contexts/language-context';
 import { Toaster } from '@/components/ui/toaster';
 import './globals.css';
-import { Inter } from 'next/font/google';
+import { Inter, Outfit } from 'next/font/google';
 import { cn } from '@/lib/utils';
 
 
@@ -12,8 +12,13 @@ const inter = Inter({
   variable: '--font-inter',
 })
 
+const outfit = Outfit({
+  subsets: ['latin'],
+  variable: '--font-outfit',
+})
+
 export const metadata: Metadata = {
-  title: 'Bhumicare Web Dashboard',
+  title: 'DharaAI Web Dashboard',
   description:
     'A responsive, AI + IoT-powered soil intelligence web dashboard for Indian farmers and agricultural organizations.',
 };
@@ -25,7 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={cn('font-sans antialiased', inter.variable)}>
+      <body className={cn('font-sans antialiased text-foreground bg-background', inter.variable, outfit.variable)}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <LanguageProvider>
             {children}

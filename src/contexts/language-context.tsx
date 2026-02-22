@@ -22,7 +22,7 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   const [language, setLanguage] = useState<Language>('en');
 
   useEffect(() => {
-    const savedLanguage = localStorage.getItem('bhumicare-lang') as Language;
+    const savedLanguage = localStorage.getItem('dharaai-lang') as Language;
     if (savedLanguage && translations[savedLanguage]) {
       setLanguage(savedLanguage);
     }
@@ -30,7 +30,7 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
 
   const handleSetLanguage = (lang: Language) => {
     setLanguage(lang);
-    localStorage.setItem('bhumicare-lang', lang);
+    localStorage.setItem('dharaai-lang', lang);
   };
 
   const t = (key: string): string => {

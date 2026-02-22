@@ -9,7 +9,7 @@ export default function RegisterPage() {
   return (
     <Card className="w-full max-w-lg bg-background/30 backdrop-blur-xl border-white/20">
       <CardHeader>
-        <CardTitle className="text-2xl font-headline">{t('register_for_bhumicare')}</CardTitle>
+        <CardTitle className="text-2xl font-headline">{t('register_for_dharaai')}</CardTitle>
         <CardDescription>
           Create an account to monitor your farm's soil health.
         </CardDescription>

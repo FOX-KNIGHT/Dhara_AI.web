@@ -51,7 +51,7 @@ export const FeatureShowcase = () => {
     const [activeFeature, setActiveFeature] = useState(features[0].id);
     const featureRefs = useRef<(HTMLDivElement | null)[]>([]);
 
-     useEffect(() => {
+    useEffect(() => {
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
@@ -68,7 +68,7 @@ export const FeatureShowcase = () => {
         });
 
         return () => {
-             featureRefs.current.forEach((ref) => {
+            featureRefs.current.forEach((ref) => {
                 if (ref) observer.unobserve(ref);
             });
         };
@@ -82,10 +82,10 @@ export const FeatureShowcase = () => {
                     <h2 className="text-3xl md:text-4xl font-semibold tracking-tighter">{t('solution_title')}</h2>
                     <p className="text-lg text-muted-foreground">{t('solution_subtitle')}</p>
                 </div>
-                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-                     <div className="lg:sticky top-24 space-y-8">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+                    <div className="lg:sticky top-24 space-y-8">
                         {features.map((feature, index) => (
-                             <motion.div 
+                            <motion.div
                                 key={feature.id}
                                 className={cn(
                                     "p-6 rounded-2xl border transition-all duration-300",
@@ -107,14 +107,14 @@ export const FeatureShowcase = () => {
 
                     <div className="hidden lg:flex flex-col space-y-8">
                         {features.map((feature, index) => (
-                             <div 
-                                key={feature.id} 
-                                id={feature.id} 
-                                ref={el => featureRefs.current[index] = el}
+                            <div
+                                key={feature.id}
+                                id={feature.id}
+                                ref={el => { featureRefs.current[index] = el; }}
                                 className="min-h-[60vh] flex items-center justify-center"
                             >
                                 <motion.div
-                                     className={cn(
+                                    className={cn(
                                         "relative w-full aspect-video rounded-2xl border border-white/10 p-4 transition-opacity duration-500",
                                         activeFeature === feature.id ? 'opacity-100' : 'opacity-30'
                                     )}
@@ -127,7 +127,7 @@ export const FeatureShowcase = () => {
                                         className="rounded-lg w-full h-full object-cover"
                                     />
                                 </motion.div>
-                             </div>
+                            </div>
                         ))}
                     </div>
                 </div>
