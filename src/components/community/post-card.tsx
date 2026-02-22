@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
-import { MessageCircle, ThumbsUp, MoreHorizontal, Share2, ShieldCheck, Heart } from "lucide-react";
+import { MessageSquare, ThumbsUp, MoreHorizontal, Share2, ShieldCheck, Heart } from "lucide-react";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { Textarea } from "../ui/textarea";
 import { Separator } from "../ui/separator";
