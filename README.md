@@ -1,34 +1,92 @@
-# 🌾 Dhara AI: Intelligent Agritech Platform
+# 🌾 Dhara AI
 
-A next-generation, multilingual agricultural dashboard designed to empower farmers and agronomists with AI-driven insights, real-time environmental telemetry, and predictive crop management. Built for accessibility and scale, Dhara AI bridges the gap between advanced data science and on-the-ground farming.
+> "Turning data into decisions for every farmer."
 
-[![Next.js](https://img.shields.io/badge/Next.js-15+-black.svg)](https://nextjs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue.svg)](https://www.typescriptlang.org/)
-[![TailwindCSS](https://img.shields.io/badge/Tailwind-3.4-38B2AC.svg)](https://tailwindcss.com/)
-[![Firebase Genkit](https://img.shields.io/badge/AI-Firebase_Genkit-FFCA28.svg)](https://firebase.google.com/docs/genkit)
-[![Status](https://img.shields.io/badge/Status-Active-green.svg)]()
+Dhara AI is an intelligent agritech platform that combines AI, real-time telemetry, and geospatial analytics to deliver actionable insights for modern agriculture.
 
-## ✨ Key Features
+Built to empower farmers, agronomists, and agri-enterprises — Dhara AI transforms raw environmental data into precise, localized farming intelligence.
 
-- **🧠 AI-Powered Agronomy**: Leverages AI flows (`firebase/genkit`) to generate dynamic **Smart Recommendations** and localized **Soil Fertility Maps** based on live data.
-- **🌍 Native Multilingual Support**: Built-in localization architecture (`i18n`) supporting **English, Hindi (hi), Bengali (bn), and Odia (or)**, ensuring the platform is usable by regional farming communities.
-- **📊 Real-Time Telemetry & Dashboards**: Comprehensive visualization of critical farming metrics:
-    - Interactive **Soil Moisture Gauges** & **NPK Level Charts**
-    - Live **Weather Widgets** and **Pest Alerts**
-    - Dynamic **Crop Calendars** and **Market Price** trackers.
-- **🗺️ Geospatial Farm Mapping**: Leaflet-powered interactive maps for precise farm registration and AI-enhanced spatial fertility visualization.
-- **🤝 Farmer Community Hub**: A dedicated social module allowing users to create posts, share localized insights, and collaborate.
+---
+
+## 🚀 What is Dhara AI?
+
+Dhara AI is not just a dashboard.
+
+It is a **decision engine for agriculture**.
+
+- It understands soil health  
+- It predicts crop needs  
+- It adapts to local conditions  
+- It communicates in regional languages  
+
+From small farmers to large-scale operations — Dhara AI makes precision farming accessible.
+
+---
+
+## ✨ Core Features
+
+### 🧠 AI-Powered Intelligence
+- Smart crop recommendations
+- Soil fertility inference
+- Explainable AI decisions
+
+### 🌍 Multilingual by Design
+- English  
+- Hindi  
+- Bengali  
+- Odia  
+
+Built for real Indian farmers.
+
+### 📊 Real-Time Dashboard
+- Soil moisture tracking  
+- NPK level visualization  
+- Weather insights  
+- Market price monitoring  
+
+### 🗺️ Smart Farm Mapping
+- Interactive land mapping
+- AI-based fertility zones
+- Location-aware insights
+
+### 🤝 Community Layer
+- Farmer discussions
+- Knowledge sharing
+- Local insights
+
+---
 
 ## 🏗️ System Architecture
 
-Dhara AI combines a modern React frontend with edge-ready AI inference workflows:
-
 ```mermaid
 graph TD
-    A[Farmer / User] -->|Selects Language| B{Dhara AI Next.js App}
-    B -- Geospatial Data --> C[Leaflet Maps Engine]
-    B -- Telemetry Data --> D[Dashboard Widgets]
-    B -- Query --> E{AI Core Flows}
-    E --> F[Smart Crop Recommendations]
-    E --> G[Soil Fertility Inference]
-    D --> H(Weather, Moisture, NPK, Market)
+A[Farmer] --> B[Dhara AI App]
+B --> C[Dashboard Engine]
+B --> D[Geospatial Maps]
+B --> E[AI Engine]
+E --> F[Recommendations]
+E --> G[Fertility Insights]
+⚙️ Tech Stack
+
+Next.js
+
+TypeScript
+
+Tailwind CSS
+
+Firebase Genkit (AI)
+
+Leaflet (Maps)
+
+📁 Project Structure
+src/
+├── ai/
+├── app/
+├── components/
+├── locales/
+└── contexts/
+🚀 Getting Started
+git clone https://github.com/fox-knight/dhara_ai.web.git
+cd dhara_ai.web
+npm install
+npm run dev
