@@ -1,102 +1,34 @@
-<div align="center">
+# 🌾 Dhara AI: Intelligent Agritech Platform
 
-# BHUMICARE.WEB
-*Empowering Sustainable Farming Through Intelligent Innovation*
+A next-generation, multilingual agricultural dashboard designed to empower farmers and agronomists with AI-driven insights, real-time environmental telemetry, and predictive crop management. Built for accessibility and scale, Dhara AI bridges the gap between advanced data science and on-the-ground farming.
 
----
+[![Next.js](https://img.shields.io/badge/Next.js-15+-black.svg)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue.svg)](https://www.typescriptlang.org/)
+[![TailwindCSS](https://img.shields.io/badge/Tailwind-3.4-38B2AC.svg)](https://tailwindcss.com/)
+[![Firebase Genkit](https://img.shields.io/badge/AI-Firebase_Genkit-FFCA28.svg)](https://firebase.google.com/docs/genkit)
+[![Status](https://img.shields.io/badge/Status-Active-green.svg)]()
 
-<p align="center">
-    <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License">
-    <img src="https://img.shields.io/github/repo-size/navixair/DharaAI.web?style=flat&logo=github&label=Repo%20Size" alt="Repo Size">
-    <img src="https://img.shields.io/github/issues/navixair/DharaAI.web?style=flat&logo=github&color=green" alt="Issues">
-    <img src="https://img.shields.io/github/forks/navixair/DharaAI.web?style=flat&logo=github&color=blue" alt="Forks">
-    <img src="https://img.shields.io/github/stars/navixair/DharaAI.web?style=flat&logo=github&color=yellow" alt="Stars">
-    <img src="https://img.shields.io/github/contributors/navixair/DharaAI.web?style=flat&logo=github&color=orange" alt="Contributors">
-    <img src="https://img.shields.io/github/last-commit/navixair/DharaAI.web?style=flat&logo=github&color=red" alt="Last Commit">
-</p>
+## ✨ Key Features
 
-<p align="center">
-    Built with the tools and technologies:
-</p>
+- **🧠 AI-Powered Agronomy**: Leverages AI flows (`firebase/genkit`) to generate dynamic **Smart Recommendations** and localized **Soil Fertility Maps** based on live data.
+- **🌍 Native Multilingual Support**: Built-in localization architecture (`i18n`) supporting **English, Hindi (hi), Bengali (bn), and Odia (or)**, ensuring the platform is usable by regional farming communities.
+- **📊 Real-Time Telemetry & Dashboards**: Comprehensive visualization of critical farming metrics:
+    - Interactive **Soil Moisture Gauges** & **NPK Level Charts**
+    - Live **Weather Widgets** and **Pest Alerts**
+    - Dynamic **Crop Calendars** and **Market Price** trackers.
+- **🗺️ Geospatial Farm Mapping**: Leaflet-powered interactive maps for precise farm registration and AI-enhanced spatial fertility visualization.
+- **🤝 Farmer Community Hub**: A dedicated social module allowing users to create posts, share localized insights, and collaborate.
 
-<p align="center">
-    <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React">
-    <img src="https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js">
-    <img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
-    <img src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS">
-    <img src="https://img.shields.io/badge/Firebase-039BE5?style=for-the-badge&logo=Firebase&logoColor=white" alt="Firebase">
-    <img src="https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white" alt="Jest">
-</p>
+## 🏗️ System Architecture
 
-</div>
+Dhara AI combines a modern React frontend with edge-ready AI inference workflows:
 
----
-
-## Table of Contents
-
-- [Overview](#overview)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Testing](#testing)
-
----
-
-## Overview
-
-DharaAI.web is an open-source platform designed to empower developers in creating intelligent, sustainable agricultural applications. It integrates AI-driven analytics with live environmental data, offering modular components to streamline agricultural workflows.
-
-### Why DharaAI.web?
-
-This project aims to facilitate the development of sustainable farming solutions through a modular architecture and cutting-edge technologies. Our core features include:
-
--   🧩 **Modular Components:** Reusable React components for charts, maps, forms, and notifications to accelerate development.
--   🤖 **AI Workflows:** Advanced soil fertility mapping and crop recommendations powered by AI, integrated with user-friendly APIs.
--   📊 **Real-Time Data:** Dynamic visualization of sensor metrics and weather updates for informed decision-making.
--   🌐 **Multilingual Support:** Localization files enabling seamless internationalization for diverse user bases.
--   ☁️ **Flexible Deployment:** Configurable Next.js setup with Firebase hosting and custom environment variables for scalable deployment.
-
----
-
-## Getting Started
-
-### Prerequisites
-
-This project requires the following dependencies:
-
--   **Programming Language:** TypeScript
--   **Package Manager:** Npm
-
-### Installation
-
-Clone **DharaAI.web** from the source and install dependencies:
-
-1.  **Clone the repository:**
-
-    ```bash
-    git clone [https://github.com/navixair/DharaAI.web](https://github.com/navixair/DharaAI.web)
-    ```
-
-2.  **Navigate to the project directory:**
-
-    ```bash
-    cd DharaAI.web
-    ```
-
-3.  **Install the dependencies:**
-
-    Using `NPM`:
-
-    ```bash
-    npm install
-    ```
-
-### Usage
-
-Run the project with:
-
-Using `NPM`:
-
-```bash
-npm start
+```mermaid
+graph TD
+    A[Farmer / User] -->|Selects Language| B{Dhara AI Next.js App}
+    B -- Geospatial Data --> C[Leaflet Maps Engine]
+    B -- Telemetry Data --> D[Dashboard Widgets]
+    B -- Query --> E{AI Core Flows}
+    E --> F[Smart Crop Recommendations]
+    E --> G[Soil Fertility Inference]
+    D --> H(Weather, Moisture, NPK, Market)
